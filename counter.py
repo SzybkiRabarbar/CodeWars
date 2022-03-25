@@ -1,6 +1,7 @@
 from os import listdir
 from os.path import isfile
 from time import sleep
+from subprocess import run
 
 def ile_roz():
     return len([name for name in listdir('.') if isfile(name) and '.py' in name and not '000test.py' in name and not 'counter.py' in name])
@@ -13,6 +14,21 @@ def nadpis():
             'Liczba zadań na tym repozytorium: '+str(ile_roz())                    
     readme.write(tresc)
 
+def push_to_git():
+    run(['git', 'add', '.'])
+    run(['git', 'commit', '-m', '"Wysłane automatycznie"', '.'])
+    run(['git', 'push', 'origin', 'master'])
+
 while True:
     nadpis()
+    push_to_git()
     sleep(3600)
+
+
+'''
+
+Komendy do zatrzymania programu w tle:
+# ps aux | grep 'counter.py'
+# kill PID
+
+'''
