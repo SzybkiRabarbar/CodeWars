@@ -10,9 +10,9 @@ def ile_roz():
 
 def nadpis():
     readme = open('README.md','w')
-    tresc = '# CodeWars \n' \
-            'Mój profil na stronie Codewars \n' \
-            'https://www.codewars.com/users/NieetycznyPa%C5%BAdzierz%20 \n' \
+    tresc = '# CodeWars <br/>\n' \
+            'Mój profil na stronie Codewars <br/>\n' \
+            'https://www.codewars.com/users/NieetycznyPa%C5%BAdzierz%20 <br/>\n' \
             'Liczba zadań na tym repozytorium: '+str(ile_roz())                    
     readme.write(tresc)
 
