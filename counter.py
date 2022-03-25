@@ -1,6 +1,3 @@
-#aplikacja zliczająca pliki w folderze, aktualizująca plik readme codziennie
-#+ paradoks 3 dzrzw
-
 from os import listdir
 from os.path import isfile
 from time import sleep
