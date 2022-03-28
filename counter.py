@@ -3,8 +3,10 @@ from os.path import isfile
 from time import sleep
 from subprocess import run
 
+ignore = ['000test.py', 'counter.py']
+
 def ile_roz():
-    return len([name for name in listdir('.') if isfile(name) and '.py' in name and not '000test.py' in name and not 'counter.py' in name])
+    return len([name for name in listdir('.') if isfile(name) and '.py' in name and not name in ignore])
 
 def nadpis():
     readme = open('README.md','w')
