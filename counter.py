@@ -18,12 +18,15 @@ def push_to_git():
     run(['git', 'add', '.'])
     run(['git', 'commit', '-m', '"Wysłane automatycznie"', '.'])
     run(['git', 'push', 'origin', 'master'])
-
-while True:
+#
+#while True:
+#    nadpis()
+#    push_to_git()
+#    sleep(3600)
+#
+if __name__ == '__main__':
     nadpis()
     push_to_git()
-    sleep(3600)
-
 
 '''
 
