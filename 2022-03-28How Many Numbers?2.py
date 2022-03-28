@@ -1,3 +1,7 @@
+'''
+https://www.codewars.com/kata/55f5efd21ad2b48895000040/solutions/python
+'''
+
 def max_sumDig(nMax, maxSum):
     numb_lst = []
     for numb in range(1000,nMax+1):
