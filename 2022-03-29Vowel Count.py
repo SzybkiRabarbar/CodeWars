@@ -9,4 +9,4 @@ def get_count1(sentence):
 
 vo = ['a','e','i','o','u']
 def get_count(sentence):
-    return len([[1 if b==s else "" for b in vo] for s in sentence])
+    return len([1 for s in sentence if [True for v in vo if v==s]])
