@@ -18,45 +18,9 @@ dykta = {
 
 def get_pins(observed):
     posibilities = [dykta[ob] for ob in observed]
-    temp = ', '.join([str(posibilities[i]) for i in range(len(posibilities))])
-    content = list(product(eval(temp)))
-    return exec(temp)
+    content = [''.join(l) for l in list(product(*(posibilities[i] for i in range(len(posibilities)))))]
+    return content
+     
 
-
-def get_pins1(observed):
-    content = []
-    posibilites = [dykta[observed[i]] for i in range(len(observed))]
-    code_len = len(posibilites)
-    for num1 in posibilites[0]:
-        if len(posibilites)==1:
-            content.append(num1)
-        else:
-            for num2 in posibilites[1]:
-                if len(posibilites)==2:
-                    content.append(num1+num2)
-                else:
-                    for num3 in posibilites[2]:
-                        if len(posibilites)==3:
-                            content.append(num1+num2+num3)
-                        else:
-                            for num4 in posibilites[3]:
-                                if len(posibilites)==4:
-                                    content.append(num1+num2+num3+num4)
-                                else:
-                                    for num5 in posibilites[4]:
-                                        if len(posibilites)==5:
-                                            content.append(num1+num2+num3+num4+num5)
-                                        else:
-                                            for num6 in posibilites[5]:
-                                                if len(posibilites)==6:
-                                                    content.append(num1+num2+num3+num4+num5+num6)
-                                                else:
-                                                    for num7 in posibilites[6]:
-                                                        if len(posibilites)==7:
-                                                            content.append(num1+num2+num3+num4+num5+num6+num7)
-                                                        else:
-                                                            for num8 in posibilites[7]:
-                                                                content.append(num1+num2+num3+num4+num5+num6+num7+num8)   
-    return content      
-
-print(get_pins('12'))
+x = '123'
+print(get_pins(x))
