@@ -23,7 +23,7 @@ def nadpis():
 def push_to_git():
     run(['git', 'add', '.'])
     run(['git', 'commit', '-m', 'Wysłane automatycznie', '.'])
-    run(['git', 'push', 'master'])
+    run(['git', 'push', 'origin', 'master'])
 
 if __name__ == '__main__':
     nadpis()
