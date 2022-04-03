@@ -1,6 +1,11 @@
-def domain_name(url):
-    url = url.replace('http://','')
-    url = url.replace('https://','')
-    return url
+'''
+https://www.codewars.com/kata/514a024011ea4fb54200004b/train/python
+'''
 
-print(domain_name('http://github.com/carbonfive/raygun'))
+def domain_name(url):
+    url = url.replace('www.','').replace('http://','').replace('https://','')
+    temp = url.split('/')
+    domain = temp[0].split('.')
+    return domain[0]
+
+print(domain_name('https://www.codewars.com/kata/514a024011ea4fb54200004b/train/python'))
