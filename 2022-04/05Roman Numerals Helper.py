@@ -41,10 +41,3 @@ class RomanNumerals:
             else:
                 content+=value            
         return content
-
-if __name__ == '__main__':
-    value = 'XXX'
-    print(RomanNumerals.from_roman(value))
-    isvalid=  RomanNumerals.to_roman(RomanNumerals.from_roman(value))
-    if isvalid==value:
-        'Dane poprawnie wprowadzone'
