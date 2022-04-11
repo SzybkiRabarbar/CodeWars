@@ -67,4 +67,7 @@ def time_unit(bits:str):
     if min(time_lst0)<min(time_lst1): return min(time_lst0)
     return min(time_lst1)
 
+if __name__ == '__main__':
+    b = '0000000011011010011100000110000001111110100111110011111100000000000111011111111011111011111000000101100011111100000111110011101100000100000'
+    print(decode_morse(decode_bits(b)))
 
