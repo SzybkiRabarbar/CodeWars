@@ -1,6 +1,6 @@
 from os import listdir
 from os.path import isdir
-from time import sleep
+#from time import sleep
 from subprocess import run
 
 ignore = ['000test.py', 'counter.py']
