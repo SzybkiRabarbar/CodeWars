@@ -1,4 +1,6 @@
-#https://www.codewars.com/kata/5dad6e5264e25a001918a1fc/train/python
+'''
+https://www.codewars.com/kata/5dad6e5264e25a001918a1fc/train/python
+'''
 def decode(r:str):
     NUMBERS_FOR_LETTERS = {i-97: chr(i)for i in range(97,123)}
     number=str()
