@@ -7,5 +7,3 @@ def plastic_balance(lst):
         del lst[0]
         if lst: del lst[-1]    
     return []
-
-print(plastic_balance([13]))
