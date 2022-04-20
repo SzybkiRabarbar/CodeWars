@@ -1,5 +1,11 @@
+'''
+https://www.codewars.com/kata/625ea5c1a071210065c923af
+'''
 def plastic_balance(lst):
-    
-    return lst[0],lst[-1]
+    while lst:
+        if lst[0]+lst[-1]==sum(lst[1:-1]): return lst
+        del lst[0]
+        if lst: del lst[-1]    
+    return []
 
-print(plastic_balance([1,2,3]))
+print(plastic_balance([13]))
