@@ -19,6 +19,7 @@ def nadpis():
             '# https://www.codewars.com/users/NieetycznyPa%C5%BAdzierz%20 <br/>\n' \
             'Liczba rozwiązań na tym repozytorium: '+str(ile_roz())                    
     readme.write(tresc)
+    readme.close()
 
 def push_to_git():
     run(['git', 'add', '.'])
