@@ -1,6 +1,15 @@
 '''
 https://www.codewars.com/kata/62632ee70fe6db1c6da6555f/python
 https://www.codewars.com/kata/62632ee70fe6db1c6da6555f/train/python
+
+A prime quadruplet is a set of four primes of the form [p, p+2, p+6, p+8].
+
+We are interested in returning the comma-separated string of the first prime quadruplet that starts with a number bigger or equal to a given value.
+ 
+Good Luck!
+
+More on prime quadruplet:https://en.wikipedia.org/wiki/Prime_quadruplet
+
 '''
 from math import sqrt
 def next_prime(n):
