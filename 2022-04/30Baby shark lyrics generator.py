@@ -9,4 +9,3 @@ def baby_shark_lyrics():
             r+=f"{t[i]}, {t[6]}\n"
         r+=f"{t[i]}!\n"
     return f"{r}Run away,…"
-
