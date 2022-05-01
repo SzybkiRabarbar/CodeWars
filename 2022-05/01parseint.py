@@ -1,5 +1,4 @@
 #https://www.codewars.com/kata/525c7c5ab6aecef16e0001a5/python
-#https://stackoverflow.com/questions/493174/is-there-a-way-to-convert-number-words-to-integers
 def text2int(textnum, numwords={}):
     if not numwords:
         units = [
