@@ -1,3 +1,4 @@
+#https://www.codewars.com/kata/58539230879867a8cd00011c/python
 from string import ascii_lowercase as lc
 from string import ascii_uppercase as uc
 def find_children(dancing_brigade:str)->str:    
