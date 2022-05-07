@@ -1,6 +1,6 @@
 #https://www.codewars.com/kata/626d691649cb3c7acd63457b/python
-def formula1(verstappen: int, events: str) -> int:
-    if f"{verstappen} I" in events: return -1
+def champion_rank(verstappen: int, events: str) -> int:
+    if f" {verstappen} I" in events: return -1
     pos=[str(x) for x in range(1,21)]
     events=iter(events.split())
     for pilot in events:
