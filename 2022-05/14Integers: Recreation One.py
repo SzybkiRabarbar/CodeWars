@@ -10,11 +10,9 @@ def divisors(n):
 def list_squared(m, n):
     result=[]
     for number in range(m,n):
-        print('===',number,'===')
+        #print('===',number,'===')
         div_sum = sum([x**2 for x in divisors(number)])
         div_sqrt = div_sum**.5
         if div_sqrt == int(div_sqrt):
             result.append([number, div_sum])
     return result
-
-print(list_squared(240,250))
