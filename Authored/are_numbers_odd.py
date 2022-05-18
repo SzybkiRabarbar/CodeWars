@@ -1,24 +1,23 @@
 def odd_or_not(num:int)->int:
-    return num%2
+    return bool(num%2)
 
-def is_number_odd(number:int)->int:
-    return bool(odd_or_not(number))
+def are_iter_odd(numbers:list)->list:
+    return [number for number in map(odd_or_not, numbers)]
 
-def are_numbers_odd(numbers:list)->list:
-    return [bool(number) for number in map(odd_or_not, numbers)]
-
-def check_input(*numbers):
+def are_numbers_odd(*numbers):
     content=[]
     for number in numbers:
-        if type(number)==int:
-            content.append(is_number_odd(number))
-        elif type(number)==list and all([True if type(n)==int else False for n in number]):
-            content.append(are_numbers_odd(number))
+        if isinstance(number, int):
+            content.append(odd_or_not(number))
+        elif number and isinstance(number, (list, set, tuple)) and all([True if isinstance(n, int) else False for n in number]):
+            content.append(are_iter_odd(number))
         else:
-            raise Exception('Bad input! Input must be integer or list of integers')
+            return f"Wrong input: '{number}', index: {numbers.index(number)}"
     return content
 
 if __name__=='__main__':
-    print(check_input([5,2,2,1,3,4,5],2,3,'a'))
+    print(are_numbers_odd(1,[2,3],4,[5,'v']))
+    
+    # test.assert_equals()
     
 
