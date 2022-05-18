@@ -3,12 +3,13 @@ from os.path import isdir
 #from time import sleep
 from subprocess import run
 
+skip_dir = ['Authored', '.git']
 ignore = ['000test.py', 'counter.py']
 
 def ile_roz():
     content=0
     for dir in listdir('.'):
-        if isdir(dir):
+        if isdir(dir) and not dir in skip_dir:
             content += len([name for name in listdir(dir) if '.py' in name and not name in ignore])
     return content
 
