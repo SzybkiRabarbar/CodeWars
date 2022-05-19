@@ -4,7 +4,7 @@ def odd_or_not(num:int)->int:
 def are_iter_odd(numbers:list)->list:
     return [number for number in map(odd_or_not, numbers)]
 
-def are_numbers_odd(*numbers):
+def are_numbers_odd(numbers:list):
     content=[]
     for number in numbers:
         if isinstance(number, int):
@@ -16,7 +16,7 @@ def are_numbers_odd(*numbers):
     return content
 
 if __name__=='__main__':
-    print(are_numbers_odd(1,[2,3],4,[5,'v']))
+    print(are_numbers_odd([[1,'a',3]]))
     
     # test.assert_equals()
     
